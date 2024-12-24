@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@android:color/transparent"
+    tools:context=".OptimasiBiaya">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/bupasta_text" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            android:text="Bupasta Rekomendasi Rute"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cdOptimasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJudul">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Lokasi Anda saat ini"
+                    app:boxBackgroundMode="filled"
+                    app:startIconDrawable="@drawable/baseline_location_pin_24"
+                    app:startIconTint="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAsal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Masukkan tujuan destinasi Anda"
+                    app:boxBackgroundMode="filled"
+                    app:startIconDrawable="@drawable/baseline_flag_circle_24"
+                    app:startIconTint="#4CAF50">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnOpenMaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat Rute" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_logout_24"
+            app:tint="@color/design_default_color_error" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:padding="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cdOptimasi"
+            app:layout_marginBaseline="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Berikan rating Anda!"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="32dp">
+
+                    <ImageView
+                        android:id="@+id/star1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:tint="@android:color/secondary_text_dark"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/star2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:tint="@android:color/secondary_text_dark"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/star3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:tint="@android:color/secondary_text_dark"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/star4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:tint="@android:color/secondary_text_dark"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/star5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:tint="@android:color/secondary_text_dark"
+                        app:srcCompat="@drawable/baseline_star_24" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonKirimRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kirim"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

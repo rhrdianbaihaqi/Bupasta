@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "8935166709",
+    "project_id": "tbo2-38af9",
+    "storage_bucket": "tbo2-38af9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8935166709:android:717dd719d12870cd646bbc",
+        "android_client_info": {
+          "package_name": "com.millenialzdev.uasdaa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD__JKriG3eLCt75mcilHw5KxdQRviSgA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
